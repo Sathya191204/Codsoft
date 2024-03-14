@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+         
+
+        
+        *{
+            text-align: center;
+        }
+        #n1{
+            margin-top: 5%;
+        }
+        #d1,#d2,#d3,#d4
+        {
+            background-color: aqua;
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="text" id="n1" placeholder="NUMBER1"><br><br>
+    <input type="text" id="n2" placeholder="NUMBER2">
+    <br><br>
+    <button id="d1" onclick="add()">+</button>
+    <button id="d2" onclick="subtract()">-</button>
+    <button id="d3" onclick="multiply()">*</button>
+    <button id="d4"onclick="divide()">/</button><br>
+    <p id="res"></p>
+    
+    <script>
+    
+          function add() {
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;
+            document.getElementById("res").innerHTML = "Addition of numbers is: " + (parseInt(a) + parseInt(b));
+        }
+
+      
+        function subtract() {
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;
+            document.getElementById("res").innerHTML = "Subtraction of numbers is: " + (parseInt(a) - parseInt(b));
+        }
+
+        function multiply() {
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;
+            document.getElementById("res").innerHTML = "Product of numbers is: " + (parseInt(a) * parseInt(b));
+        }
+
+        function divide() {
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;
+            if (parseInt(b) !== 0) {
+                document.getElementById("res").innerHTML = "Quotient of numbers is: " + (parseInt(a) / parseInt(b));
+            } else {
+                document.getElementById("res").innerHTML = "Cannot divide by zero!";
+            }
+        }
+    </script>
+</body>
+</html>
